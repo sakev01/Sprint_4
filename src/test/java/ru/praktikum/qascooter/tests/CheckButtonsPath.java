@@ -15,7 +15,6 @@ import static org.junit.Assert.assertEquals;
 public class CheckButtonsPath extends BaseTest {
     private OrderPage orderPage;
     private BasePage basePage;
-
     private int standardWaitTime = 10;
 
     @Test // Проверить: если нажать на логотип «Самоката», попадёшь на главную страницу «Самоката».

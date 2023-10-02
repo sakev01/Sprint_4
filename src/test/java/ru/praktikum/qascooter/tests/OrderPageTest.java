@@ -10,7 +10,6 @@ public class OrderPageTest extends BaseTest{
 
     private OrderPage orderPage;
     private MainPage mainPage;
-
     private String orderCompletedSuccess = "Заказ оформлен";
 
     @Test // Заполнить форму Заказ самоката через кнопку «Заказать» вверху

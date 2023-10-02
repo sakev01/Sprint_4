@@ -17,11 +17,13 @@ public class BasePage {
     }
 
     public static final String MAIN_PAGE_URL = "https://qa-scooter.praktikum-services.ru/";
-    public By orderButtonTop = By.xpath(".//button[@class='Button_Button__ra12g']");
-    public By orderButtonBottom = By.xpath(".//button[@class='Button_Button__ra12g Button_UltraBig__UU3Lp']");
+    // Logo as Link
     private By logoScooter = By.xpath(".//a[@class='Header_LogoScooter__3lsAR']");
     private By logoYandex = By.xpath(".//a[@class='Header_LogoYandex__3TSOI']");
 
+    //кнопки
+    public By orderButtonTop = By.xpath(".//button[@class='Button_Button__ra12g']");
+    public By orderButtonBottom = By.xpath(".//button[@class='Button_Button__ra12g Button_UltraBig__UU3Lp']");
     private By statusOrderButton = By.cssSelector("button.Header_Link__1TAG7");
     private By orderNumberInput = By.xpath(".//input[@type = 'text']");
     private By goButton = By.xpath(".//button[text()='Go!']");

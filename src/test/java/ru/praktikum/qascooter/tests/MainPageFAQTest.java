@@ -13,7 +13,7 @@ public class MainPageFAQTest extends BaseTest {
     private int questionIndex;
     private String expectedAnswer;
 
-    //Конструктор, который будет менять поля
+     //Конструктор, который будет менять поля
     public MainPageFAQTest(int questionIndex, String expectedAnswer) {
         this.questionIndex = questionIndex;
         this.expectedAnswer = expectedAnswer;

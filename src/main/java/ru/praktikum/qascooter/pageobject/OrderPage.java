@@ -8,7 +8,7 @@ public class OrderPage extends BasePage {
     public OrderPage(WebDriver driver){
         super(driver);
     }
-     // Локаторы для полей ввода в форме заказа
+      // Локаторы для полей ввода в форме заказа
     private By nameFieldInput = By.xpath(".//input[@placeholder='* Имя']");
     private By surnameFieldInput = By.xpath(".//input[@placeholder='* Фамилия']");
     private By addressFieldInput = By.xpath(".//input[@placeholder='* Адрес: куда привезти заказ']");

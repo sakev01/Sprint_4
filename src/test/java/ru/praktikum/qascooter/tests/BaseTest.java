@@ -12,7 +12,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 public class BaseTest {
     protected WebDriver driver;
     public static final String MAIN_PAGE_URL = "https://qa-scooter.praktikum-services.ru/";
-    //страница Яндекса URL
+     //страница Яндекса URL
     public static final String YANDEX_HOME_PAGE_URL = "https://dzen.ru/?yredirect=true";
 
     @Before

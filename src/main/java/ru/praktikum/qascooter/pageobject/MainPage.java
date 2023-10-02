@@ -14,7 +14,7 @@ import java.util.List;
 public class MainPage extends BasePage {
     private WebDriver driver;
 
-    // Локаторы
+     // Локаторы
     private By question = By.className("accordion__button");
     private By answerText = By.xpath("//*[@class='accordion__panel']/p");
 
