@@ -8,6 +8,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+import java.util.concurrent.TimeUnit;
+
 
 public class BaseTest {
     protected WebDriver driver;
@@ -17,8 +19,7 @@ public class BaseTest {
 
     @Before
     public void setUp() {
-        setUpDriver("firefox"); // chrome OR firefox
-//          driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        setUpDriver("chrome"); // chrome OR firefox
         driver.manage().window().maximize();
         driver.get(MAIN_PAGE_URL);
         // Закрывать блок cookies внизу страницы

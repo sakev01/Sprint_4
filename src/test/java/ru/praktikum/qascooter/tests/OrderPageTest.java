@@ -2,6 +2,8 @@ package ru.praktikum.qascooter.tests;
 import org.junit.Test;
 import ru.praktikum.qascooter.pageobject.MainPage;
 import ru.praktikum.qascooter.pageobject.OrderPage;
+
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 
@@ -65,7 +67,7 @@ public class OrderPageTest extends BaseTest{
         orderPage.selectSubwayStation("Сокол");
         orderPage.pressSubmitButton();
         String errorMessagePhoneNumber = orderPage.getPhoneNumberFieldError();
-        assertTrue(errorMessagePhoneNumber.equals("Введите корректный номер"));
+        assertEquals("Введите корректный номер", errorMessagePhoneNumber);
     }
     @Test // Форма Заказ самоката: Проверить ошибки номер - Выберите станцию
     public void testEmptySubwayStationError() {
@@ -76,7 +78,7 @@ public class OrderPageTest extends BaseTest{
         orderPage.fillAddressFieldInput("ул. Льва Толстого, 16, Москва");
         orderPage.pressSubmitButton();
         String errorSubwayStationError = orderPage.getSubwayStationError();
-        assertTrue(errorSubwayStationError.equals("Выберите станцию"));
+        assertEquals("Выберите станцию",errorSubwayStationError );
     }
     @Test //Форма Заказ самоката:  Проверить ошибки номер - Введите корректное имя
     public void testEmptyNameFieldError(){
@@ -85,7 +87,7 @@ public class OrderPageTest extends BaseTest{
         orderPage.fillNameFieldInput("");
         orderPage.pressSubmitButton();
         String errorMessageName = orderPage.getEmptyNameFieldErrorMessage();
-        assertTrue(errorMessageName.equals("Введите корректное имя"));
+        assertEquals("Введите корректное имя", errorMessageName);
 
     }
     @Test //Форма Заказ самоката:  Проверить ошибки номер - Введите корректную фамилию
@@ -96,7 +98,7 @@ public class OrderPageTest extends BaseTest{
         orderPage.fillSurnameFieldInput("");
         orderPage.pressSubmitButton();
         String errorMessageSurname = orderPage.getSurnameFieldError();
-        assertTrue(errorMessageSurname.equals("Введите корректную фамилию"));
+        assertEquals("Введите корректную фамилию",errorMessageSurname);
     }
     @Test //Форма Заказ самоката:  Проверить ошибки номер - Введите корректный адрес
     public void testEmptyAddressFieldError() {
@@ -106,8 +108,8 @@ public class OrderPageTest extends BaseTest{
         orderPage.fillSurnameFieldInput("Мамаев");
         orderPage.fillAddressFieldInput("0");
         orderPage.pressSubmitButton();
-        String errorMessageName = orderPage.getAddressFieldError();
-        assertTrue(errorMessageName.equals("Введите корректный адрес"));
+        String errorAddressField = orderPage.getAddressFieldError();
+        assertEquals("Введите корректный адрес", errorAddressField);
     }
     /*        Не могу понять, как сделать проверку для input на второй странице заказа.
         Так как там нет всплывающего сообщения, можно сделать проверку через assert на окно 'Заказ выполнен'.
@@ -129,7 +131,7 @@ public class OrderPageTest extends BaseTest{
             orderPage.fillCommentsForDeliveryGuy ("");
             orderPage.pressSubmitButton();
             String errorCommentsDeliveryField = orderPage.getCommentsDeliveryFieldError();
-            assertTrue(errorCommentsDeliveryField.equals("Тут что-то не так"));
+            assertEquals("Тут что-то не так", errorCommentsDeliveryField);
         }
 
 }
