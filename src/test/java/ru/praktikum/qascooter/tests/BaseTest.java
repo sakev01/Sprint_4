@@ -9,6 +9,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 
+
 public class BaseTest {
     protected WebDriver driver;
     public static final String MAIN_PAGE_URL = "https://qa-scooter.praktikum-services.ru/";
@@ -17,8 +18,7 @@ public class BaseTest {
 
     @Before
     public void setUp() {
-        setUpDriver("firefox"); // chrome OR firefox
-//          driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        setUpDriver("chrome"); // chrome OR firefox
         driver.manage().window().maximize();
         driver.get(MAIN_PAGE_URL);
         // Закрывать блок cookies внизу страницы

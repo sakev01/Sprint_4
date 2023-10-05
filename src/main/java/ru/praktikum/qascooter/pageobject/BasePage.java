@@ -8,14 +8,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 
 public class BasePage {
-
     protected WebDriver driver;
     public int standardWaitTime = 10;
-
     public BasePage(WebDriver driver) {
         this.driver = driver;
     }
-
     public static final String MAIN_PAGE_URL = "https://qa-scooter.praktikum-services.ru/";
     // Logo as Link
     private By logoScooter = By.xpath(".//a[@class='Header_LogoScooter__3lsAR']");
@@ -50,5 +47,4 @@ public class BasePage {
                 .until(ExpectedConditions.elementToBeClickable(goButton));
         driver.findElement(goButton).click();
     }
-
 }
